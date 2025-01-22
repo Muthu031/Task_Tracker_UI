@@ -1,0 +1,11 @@
+.register-success-wrapper * {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .register-success-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }

@@ -1,0 +1,124 @@
+/* Importing the Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css");
+
+body,html {
+  margin: 0;
+}
+/* General reset */
+.register-wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styling the register-wrapper container */
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/register_black.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Styling the form container */
+.register-wrapper .register-container {
+  width: 750px;
+  border-radius: 10px;
+  color: #fff;
+  padding: 40px 35px 55px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0px 10px;
+  background: transparent;
+}
+
+/* Form heading */
+.register-wrapper .register-container h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input box styles */
+.register-wrapper .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.register-wrapper .input-box .input-field {
+  position: relative;
+  width: 48%;
+  height: 50px;
+  margin: 13px 0;
+}
+
+.register-wrapper .input-box .input-field input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  padding: 15px 15px 15px 40px;
+  
+}
+
+.register-wrapper .input-box .input-field input::placeholder {
+  color: #fff;
+}
+
+.register-wrapper .input-box .input-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Checkbox and label styles */
+.register-wrapper .register-container label {
+  display: inline-block;
+  font-size: 14.5px;
+  margin: 10px 0 23px;
+}
+
+.register-wrapper .register-container label input {
+  accent-color: #fff;
+  margin-right: 5px;
+}
+
+/* Button styles */
+.register-wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: lightgrey;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.register-wrapper .btn:hover {
+  background-color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .register-wrapper .input-box .input-field {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
