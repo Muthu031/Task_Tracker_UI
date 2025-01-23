@@ -3,15 +3,21 @@ import { useNavigate } from "react-router-dom";
 import "./LoginStyle.css";
 import { FaUser, FaLock } from "react-icons/fa";
 
-const Login: React.FC = () => {
+
+interface LoginProps {
+  onLoginSuccess: () => void;
+}
+const Login: React.FC <LoginProps> = ({ onLoginSuccess }) => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();  
 
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
+    onLoginSuccess();
+    navigate("/dashboard");
 
-    if (username === "sanchaikumar" && password === "sanchai@722") {
+    if (username === "Muthukumaran" && password === "muthu@123") {
       navigate("/login_success");
     } else {
       alert("Invalid Username or Password");

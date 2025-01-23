@@ -19,17 +19,17 @@ body,html {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("/register_black.jpg");
+  background: url("/purple.jpg");
   background-size: cover;
   background-position: center;
 }
 
 /* Styling the form container */
 .register-wrapper .register-container {
-  width: 750px;
+  width: 500px; /* Reduce the width for a smaller card */
   border-radius: 10px;
   color: #fff;
-  padding: 40px 35px 55px;
+  padding: 30px 25px 40px; /* Adjust padding for better fit */
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -39,7 +39,7 @@ body,html {
 
 /* Form heading */
 .register-wrapper .register-container h1 {
-  font-size: 36px;
+  font-size: 28px; /* Reduce font size */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -47,15 +47,18 @@ body,html {
 /* Input box styles */
 .register-wrapper .input-box {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column; /* Change to column layout */
+  gap: 10px; /* Add consistent spacing between input fields */
 }
 
 .register-wrapper .input-box .input-field {
   position: relative;
-  width: 48%;
-  height: 50px;
-  margin: 13px 0;
+  /* width: 48%; */
+  height: 45px;
+  /* margin: 13px 0; */
+  width: 100%; /* Ensure inputs span the full width */
+  margin: 0; /* Remove unnecessary margins */
+  margin-bottom: 15px; 
 }
 
 .register-wrapper .input-box .input-field input {
@@ -65,9 +68,9 @@ body,html {
   outline: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
-  padding: 15px 15px 15px 40px;
+  padding: 10px 10px 10px 35px;
   
 }
 
@@ -86,8 +89,8 @@ body,html {
 /* Checkbox and label styles */
 .register-wrapper .register-container label {
   display: inline-block;
-  font-size: 14.5px;
-  margin: 10px 0 23px;
+  font-size: 13px;
+  margin: 8px 0 18px;
 }
 
 .register-wrapper .register-container label input {
@@ -98,17 +101,18 @@ body,html {
 /* Button styles */
 .register-wrapper .btn {
   width: 100%;
-  height: 45px;
+  height: 40px;
   background: lightgrey;
   border: none;
   outline: none;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 .register-wrapper .btn:hover {

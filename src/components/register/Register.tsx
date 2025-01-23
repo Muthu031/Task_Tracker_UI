@@ -1,16 +1,20 @@
 import React  from "react";
 import "./RegisterStyle.css";
 import { FaUser, FaLock, FaPhoneAlt   } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+// import { MdEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const Register: React.FC = () => {
+interface RegisterProps {
+  onRegisterSuccess: () => void;
+}
+const Register: React.FC <RegisterProps> = ({ onRegisterSuccess }) => {
 
   const navigate = useNavigate();
 
   const handleRegister = (event:React.FormEvent ) => {
     event.preventDefault();
-
+    onRegisterSuccess();
+    navigate("/dashboard");
     setTimeout(() => {
       navigate("/register_success");
     },500);
@@ -40,18 +44,18 @@ const Register: React.FC = () => {
           </div>
 
           <div className="input-box">
-            <div className="input-field">
+            {/* <div className="input-field">
               <span className="icon">
                 <MdEmail />
               </span>
               <input type="email" placeholder="Email id" required />
-            </div>
+            </div> */}
 
             <div className="input-field">
               <span className="icon">
                 <FaPhoneAlt />
               </span>              
-              <input type="text" placeholder="Phone Number" required />
+              <input type="text" placeholder="Phone Number"  />
             </div>
           </div>
 
@@ -60,6 +64,9 @@ const Register: React.FC = () => {
             I hereby declare that the above information provided is true and correct
           </label>
           <button type="submit" className="btn">Register</button>
+          <p>
+              if you have an account go &  <a href="/login" className="btn">login</a>
+            </p>
         </form>
       </div>
     </div>
