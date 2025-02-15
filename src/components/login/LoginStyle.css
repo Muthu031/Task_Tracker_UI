@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("/pink.jpg");
+  background-image: url("/taskbg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -22,7 +22,7 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: rgb(12, 12, 12);
   border-radius: 10px;
   padding: 30px 40px;
 }
@@ -48,12 +48,12 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   font-size: 16px;
-  color: #fff;
+  color: #0c0c0c;
   padding: 20px 45px 20px 45px; 
 }
 
 .login-wrapper .input-box input::placeholder {
-  color: #fff;
+  color: #080808;
 }
 
 .login-wrapper .input-box .icon {
@@ -62,14 +62,14 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
-  color: #fff; 
+  color: #080707; 
   z-index: 1; 
 }
 
 .login-wrapper .btn {
   width: 100%;
   height: 45px;
-  background: lightgray;
+  background: rgb(244, 244, 244);
   border: none;
   outline:none;
   border-radius: 25px;
@@ -82,7 +82,7 @@
 }
 
 .login-wrapper .btn:hover {
-  background-color: #fff;
+  background-color: #1c1c1c;
 }
 
 .login-wrapper .register-link {

@@ -30,7 +30,8 @@ const App = () => {
       className: 'card-users',
       icon: FaUsers,
       title: 'Users',
-      value: '1,200',
+      name:'MUTHUKUMARAN',
+      task: 'IN-PROGRESS',
     },
     {
       className: 'card-traffic',
@@ -53,8 +54,8 @@ const App = () => {
         {cards.map((card, index) => (
           <div key={index} className={`card ${card.className}`}>
             <card.icon size={40} />
-            <h6>{card.title}</h6>
-            <h4>{card.value}</h4>
+            <h6>{card.title}</h6> <h5>{card.name}</h5>
+            <h4>{card.task}</h4>
           </div>
         ))}
       </div>
