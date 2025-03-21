@@ -1,17 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import Layout from '../components/Layouts/Layout';
+import Profile from '../Pages/Profile';
+import { Settings } from 'lucide-react';
+import Upgrade from '../Pages/Upgrade';
 
- const AppRouter: React.FC = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
-  );
-};
 
-// Example components
-const Home: React.FC = () => <h1>Home Page</h1>;
-const About: React.FC = () => <h1>About Page</h1>;
-export default AppRouter;
+export const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            {
+                path: '/',
+                element: <Navigate to="/profile" replace />
+            },
+            {
+                path: '/profile',
+                element: <Profile />
+            },
+            {
+                path: '/settings',
+                element: <Settings />
+            },
+            {
+                path: '/upgrade',
+                element: <Upgrade />
+            }
+        ]
+    }
+]);
