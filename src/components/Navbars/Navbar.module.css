@@ -1,50 +1,56 @@
 .navbar {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-}
-
-.menuList {
+    z-index: 997;
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+}
+
+.logo img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
 }
 
-.menuItem {
-    position: relative;
+.hamburger {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.menuLink {
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-.menuLink:hover {
-    color: #007bff;
-}
-
-.active .menuLink {
-    color: #007bff;
-}
-
-.active::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
+.hamburger span {
+    display: block;
     width: 100%;
     height: 2px;
-    background-color: #007bff;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.menuButton:hover .hamburger span {
+    background-color: #1976d2;
 }
