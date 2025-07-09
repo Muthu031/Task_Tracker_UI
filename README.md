@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+my-react-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/              # Images, fonts, static files
+│   │   ├── images/
+│   │   └── styles/
+│   │       └── globals.css
+│   ├── components/          # Reusable UI components
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Navbar.types.ts
+│   │   └── Button/
+│   │       ├── Button.tsx
+│   │       └── Button.types.ts
+│   ├── hooks/               # Custom React hooks
+│   │   └── useWindowSize.ts
+│   ├── pages/               # Route-level pages
+│   │   ├── Home/
+│   │   │   ├── Home.tsx
+│   │   │   └── Home.styles.ts
+│   │   ├── About/
+│   │   │   └── About.tsx
+│   │   └── NotFound/
+│   │       └── NotFound.tsx
+│   ├── layouts/             # Layout wrappers (optional)
+│   │   └── MainLayout.tsx
+│   ├── context/             # React Contexts (e.g., Theme, Auth)
+│   │   └── AuthContext.tsx
+│   ├── utils/               # Utility/helper functions
+│   │   └── formatDate.ts
+│   ├── services/            # API service files (Axios/Fetch)
+│   │   └── userService.ts
+│   ├── types/               # TypeScript types/interfaces
+│   │   └── index.ts
+│   ├── routes/              # React Router config
+│   │   └── AppRoutes.tsx
+│   ├── App.tsx              # Root component
+│   ├── main.tsx             # Entry point (Vite) or index.tsx (CRA)
+│   └── vite.config.ts       # Vite config (if using Vite)
+├── .env
+├── package.json
+└── tsconfig.json
