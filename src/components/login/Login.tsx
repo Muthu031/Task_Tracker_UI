@@ -11,7 +11,7 @@ const Login: React.FC = () => {
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (username === "sanchaikumar" && password === "sanchai@722") {
+    if (username === "kumar" && password === "kumar@722") {
       navigate("/login_success");
     } else {
       alert("Invalid Username or Password");
